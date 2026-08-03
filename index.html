@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Makes the page fit properly on phones -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Lavasani Builds — Cabinet installation, closets, vanities, doors and finish carpentry in the GTA."
+    >
+
+    <title>Lavasani Builds | Kamyab Lavasani</title>
+
+    <style>
+        /* ---------- BASIC SETTINGS ---------- */
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            min-height: 100vh;
+            padding: 24px 16px 48px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #ffffff;
+            background:
+                radial-gradient(circle at top, #17304c 0%, #0a1726 45%, #050b12 100%);
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        /* ---------- MAIN CARD ---------- */
+
+        .page {
+            width: 100%;
+            max-width: 520px;
+            margin: 0 auto;
+        }
+
+        .card {
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.13);
+            border-radius: 28px;
+            background: rgba(10, 24, 39, 0.88);
+            box-shadow: 0 22px 70px rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(12px);
+        }
+
+        /* ---------- COVER AREA ---------- */
+
+        .cover {
+            height: 190px;
+            position: relative;
+            background:
+                linear-gradient(rgba(5, 15, 25, 0.4), rgba(5, 15, 25, 0.85)),
+                url("cover.jpg") center/cover no-repeat;
+        }
+
+        .cover-label {
+            position: absolute;
+            top: 22px;
+            left: 22px;
+            padding: 8px 13px;
+            border: 1px solid rgba(255, 255, 255, 0.22);
+            border-radius: 100px;
+            font-size: 12px;
+            font-weight: bold;
+            letter-spacing: 1.4px;
+            text-transform: uppercase;
+            background: rgba(5, 15, 25, 0.6);
+        }
+
+        /* ---------- PROFILE ---------- */
+
+        .profile {
+            padding: 0 24px 26px;
+            text-align: center;
+        }
+
+        .logo-box {
+            width: 112px;
+            height: 112px;
+            margin: -56px auto 16px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            border: 5px solid #0a1827;
+            border-radius: 50%;
+            background: #ffffff;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+        }
+
+        .logo-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        h1 {
+            margin-bottom: 6px;
+            font-size: 29px;
+            line-height: 1.1;
+        }
+
+        .owner {
+            margin-bottom: 7px;
+            font-size: 17px;
+            font-weight: bold;
+            color: #d6b36a;
+        }
+
+        .subtitle {
+            max-width: 390px;
+            margin: 0 auto;
+            color: #c7d0da;
+            font-size: 15px;
+            line-height: 1.55;
+        }
+
+        .location {
+            margin-top: 12px;
+            color: #9eabb7;
+            font-size: 14px;
+        }
+
+        /* ---------- BUTTONS ---------- */
+
+        .buttons {
+            display: grid;
+            gap: 12px;
+            margin-top: 24px;
+        }
+
+        .button {
+            min-height: 56px;
+            padding: 15px 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.13);
+            border-radius: 15px;
+            font-size: 16px;
+            font-weight: bold;
+            transition:
+                transform 0.2s ease,
+                background 0.2s ease,
+                border-color 0.2s ease;
+        }
+
+        .button:hover {
+            transform: translateY(-2px);
+            border-color: rgba(214, 179, 106, 0.65);
+        }
+
+        .button:active {
+            transform: scale(0.98);
+        }
+
+        .primary {
+            border-color: #d6b36a;
+            color: #081522;
+            background: linear-gradient(135deg, #e6ca89, #bd8d37);
+        }
+
+        .secondary {
+            background: rgba(255, 255, 255, 0.06);
+        }
+
+        .two-buttons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        /* ---------- SECTIONS ---------- */
+
+        .section {
+            padding: 25px 24px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .section-title {
+            margin-bottom: 17px;
+            font-size: 19px;
+            text-align: center;
+        }
+
+        .services {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 11px;
+        }
+
+        .service {
+            min-height: 78px;
+            padding: 14px 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid rgba(255, 255, 255, 0.09);
+            border-radius: 14px;
+            color: #d8e0e8;
+            font-size: 14px;
+            font-weight: bold;
+            line-height: 1.35;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.04);
+        }
+
+        /* ---------- PROJECT PHOTOS ---------- */
+
+        .gallery {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 165px;
+            display: block;
+            object-fit: cover;
+            border-radius: 13px;
+            background: #13283d;
+        }
+
+        /* ---------- CONTACT ---------- */
+
+        .contact-information {
+            display: grid;
+            gap: 10px;
+            color: #c7d0da;
+            font-size: 14px;
+            line-height: 1.5;
+            text-align: center;
+        }
+
+        .contact-information strong {
+            color: #ffffff;
+        }
+
+        .footer {
+            padding: 22px;
+            color: #82909d;
+            font-size: 12px;
+            text-align: center;
+        }
+
+        /* ---------- SMALL PHONE SCREENS ---------- */
+
+        @media (max-width: 380px) {
+            h1 {
+                font-size: 25px;
+            }
+
+            .profile,
+            .section {
+                padding-left: 18px;
+                padding-right: 18px;
+            }
+
+            .services {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery img {
+                height: 135px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="page">
+        <article class="card">
+
+            <!-- Cover image -->
+            <div class="cover">
+                <div class="cover-label">Tap • Connect • Build</div>
+            </div>
+
+            <!-- Main profile section -->
+            <section class="profile">
+
+                <div class="logo-box">
+                    <img src="logo.png" alt="Lavasani Builds logo">
+                </div>
+
+                <h1>Lavasani Builds</h1>
+
+                <div class="owner">Kamyab Lavasani</div>
+
+                <p class="subtitle">
+                    Cabinet installation, closets, vanities, interior doors,
+                    trim and finish carpentry.
+                </p>
+
+                <p class="location">Richmond Hill · Serving the Greater Toronto Area</p>
+
+                <div class="buttons">
+
+                    <!-- Downloads the contact file -->
+                    <a class="button primary" href="kamyab-lavasani.vcf">
+                        ＋ Save My Contact
+                    </a>
+
+                    <div class="two-buttons">
+
+                        <!-- Phone call button -->
+                        <a class="button secondary" href="tel:+14378387723">
+                            ☎ Call
+                        </a>
+
+                        <!-- Text message button -->
+                        <a
+                            class="button secondary"
+                            href="sms:+14378387723?body=Hi%20Kamyab%2C%20I%20found%20you%20through%20your%20Lavasani%20Builds%20card."
+                        >
+                            ✉ Text
+                        </a>
+
+                    </div>
+
+                    <!-- Email button -->
+                    <a
+                        class="button secondary"
+                        href="mailto:kamyab.lavasani@gmail.com?subject=Project%20Inquiry%20-%20Lavasani%20Builds"
+                    >
+                        Email About a Project
+                    </a>
+
+                    <!-- https://instagram.com/Kamyab_in_construction -->
+                    <a
+                        class="button secondary"
+                        href="https://instagram.com/YOUR_INSTAGRAM_USERNAME"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        View My Work on Instagram
+                    </a>
+
+                </div>
+            </section>
+
+            <!-- Services section -->
+            <section class="section">
+
+                <h2 class="section-title">Services</h2>
+
+                <div class="services">
+                    <div class="service">Kitchen Cabinet Installation</div>
+                    <div class="service">Closet Installation</div>
+                    <div class="service">Bathroom Vanities</div>
+                    <div class="service">Interior Doors</div>
+                    <div class="service">Crown, Fillers and Panels</div>
+                    <div class="service">Trim and Finish Carpentry</div>
+                </div>
+
+            </section>
+
+            <!-- Gallery section -->
+            <section class="section">
+
+                <h2 class="section-title">Recent Work</h2>
+
+                <div class="gallery">
+                    <img src="project-1.jpg" alt="Lavasani Builds cabinet installation">
+                    <img src="project-2.jpg" alt="Lavasani Builds closet installation">
+                    <img src="project-3.jpg" alt="Lavasani Builds vanity installation">
+                    <img src="project-4.jpg" alt="Lavasani Builds finish carpentry">
+                </div>
+
+            </section>
+
+            <!-- Contact information -->
+            <section class="section">
+
+                <h2 class="section-title">Contact</h2>
+
+                <div class="contact-information">
+                    <p>
+                        <strong>Phone</strong><br>
+                        437-838-7723
+                    </p>
+
+                    <p>
+                        <strong>Email</strong><br>
+                        kamyab.lavasani@gmail.com
+                    </p>
+
+                    <p>
+                        <strong>Service Area</strong><br>
+                        Greater Toronto Area
+                    </p>
+                </div>
+
+            </section>
+
+            <footer class="footer">
+                © 2026 Lavasani Builds
+            </footer>
+
+        </article>
+    </main>
+
+</body>
+</html>
